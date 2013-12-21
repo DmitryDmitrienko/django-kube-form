@@ -31,8 +31,13 @@ def kubewidth(element, size):
     element_type = element.__class__.__name__.lower()
     if element_type == 'boundfield':
         try:
+            attrs_field = element.field.widget.attrs
+            attr_size = "width-%s" % size
+            if 'class' in attrs_field:
+                class_attr = element.field.widget.attrs['class']
+                element.field.widget.attrs['class'] = class_attr + ' ' + attr_size
             element.field.widget.attrs.update({
-                'class': "width-%s" % size
+                'class': attr_size
             })
         except Exception:
             return element
