@@ -1,0 +1,8 @@
+setup.py
+kubeform/__init__.py
+kubeform/models.py
+kubeform/tests.py
+kubeform.egg-info/PKG-INFO
+kubeform.egg-info/SOURCES.txt
+kubeform.egg-info/dependency_links.txt
+kubeform.egg-info/top_level.txt

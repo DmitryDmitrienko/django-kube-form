@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: kubeform
+Version: 0.1.1
+Summary: Reusable Django app for display kube forms
+Home-page: https://github.com/DmitryDmitrienko/django-kube-form
+Author: Dmitry Dmitrienko
+Author-email: dmitry.dmitrienko@outlook.com
+License: See LICENSE
+Description: django-kube-form
+        ================
+        
+        Reusable Django app for display [kube forms](http://imperavi.com/kube/forms/ "kube forms")
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Django
+Classifier: Environment :: Web Environment
