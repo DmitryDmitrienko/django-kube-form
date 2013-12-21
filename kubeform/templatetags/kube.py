@@ -24,3 +24,13 @@ def kubeinline(element):
     template, context = get_context_template(element)
     context.update({'inline': True})
     return template.render(context)
+
+
+@register.filter
+def kubewidth(element, size):
+    element_type = element.__class__.__name__.lower()
+    if element_type == 'boundfield':
+        element.field.widget.attrs.update({
+            'class': "width-%s" % size
+        })
+    return element
