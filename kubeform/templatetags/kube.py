@@ -30,7 +30,10 @@ def kubeinline(element):
 def kubewidth(element, size):
     element_type = element.__class__.__name__.lower()
     if element_type == 'boundfield':
-        element.field.widget.attrs.update({
-            'class': "width-%s" % size
-        })
+        try:
+            element.field.widget.attrs.update({
+                'class': "width-%s" % size
+            })
+        except Exception:
+            return element
     return element
