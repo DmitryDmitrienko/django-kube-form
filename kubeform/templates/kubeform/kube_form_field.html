@@ -1,0 +1,23 @@
+{% if inline %}
+    <div class="units-row">
+        <label class="unit-50" for="{{ field.auto_id }}">
+            {{ field.label }}
+            {{ field }}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    <span class="error">{{ error|escape }}</span>
+                {% endfor %}
+            {% endif %}
+        </label>
+    </div>
+{% else %}
+    <p>
+        <label for="{{ field.auto_id }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+            {% for error in field.errors %}
+                <span class="error">{{ error|escape }}</span>
+            {% endfor %}
+        {% endif %}
+    </p>
+{% endif %}
